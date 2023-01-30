@@ -1,0 +1,45 @@
+<------- PSEUDOCODE OF HUNGRY CUSTOMER ------->
+money = 5.00
+vending_choices = {chocolate_bar, chips, fruit_snack}
+vending_price = {chocolate_bar: 1.50, chips: 1.00, fruit_snack: 1}
+vending_inventory = {chocolate_bar: 3, chips: 2, fruit_snack: 1}
+change = 0
+choice = ""
+
+Look at vending_choices and vending_prices
+SELECT choice FROM vending_choices
+IF choice vending_inventory is zero {
+	display error message selection is not available pick a different option 
+}
+Insert money into machine
+WHILE money is less than choice vending_price {
+	insert more money
+}
+Machine gears turn
+Choice drops into pickup area
+IF total money inserted is greater than choice vending_price {
+	Machine returns change
+	Pick up change from change pick up area
+}
+Remove choice from pickup area
+Update vending_inventory
+
+
+<------- PSEUDOCODE OF MACHINE OWNER ------->
+vending_inventory = {chocolate_bar: 2, chips: 2, fruit snack: 1}
+money = ""
+
+Unlock vending machine with key
+Open vending machine
+Count vending_inventory 
+IF vending_inventory is less than previous restock {
+	Restock vending_inventory 
+	Update vending_inventory
+}
+Open money storage
+IF money is greater than zero {
+	Remove money from storage
+}
+Close money storage
+Close vending machine
+Lock vending machine
